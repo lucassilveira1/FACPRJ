@@ -166,6 +166,6 @@
         </form>
     </div>
     
-    <script src="../scripts/validation.js"></script>
+        <script src="../scripts/validation.js"></script>
 </body>
 </html>

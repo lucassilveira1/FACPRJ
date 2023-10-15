@@ -72,6 +72,7 @@
         <i id="showPassIcon"><img src="../assets/eye-regular.svg" width="15px"></i>
     </div>
     
+    
     <div class="togglebtn">
         <p id="toggleContent">
 

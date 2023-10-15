@@ -56,10 +56,13 @@
                     <a href="logout.php">Desconectar</a>
                 </li>
                 <li>
-                    <a href="#">Alterar senha</a>
+                    <a href="changePswd.php">Alterar senha</a>
                 </li>
                 <li>
                     <a href="#">Modelo do BD</a>
+                </li>
+                <li>
+                    <a href="#">Área do Cliente</a>
                 </li>
             </ul>
         </li>
