@@ -75,7 +75,7 @@
     
     <div class="togglebtn">
         <p id="toggleContent">
-
+            Usuário Master?
         </p>
         <input type="checkbox" class="toggle" id="toggleBtn">
     </div>
