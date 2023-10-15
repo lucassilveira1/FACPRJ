@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 
 * {
     margin: 0;
     padding: 0;
     transition: .3s;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -11,10 +14,10 @@ body {
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(-45deg, #ffce51, #ff7253, #fd5754);
-
+    font-family: 'Poppins', sans-serif;
     background-size: 300%;
     background-position: 0 0;
-    animation: tatu 30s infinite ease-in-out;
+    animation: fundo 30s infinite ease-in-out;
 }
 
 
@@ -31,7 +34,7 @@ form {
 
 .container {
     width: 300px;
-    height: 300px;
+    height: auto;
     border: 10px thick red;
     background-color: white;
     padding: 20px 40px;
@@ -108,15 +111,61 @@ button:hover {
     margin-top: 10px;
     display: flex;
     justify-content: center;
+    gap: 5px;
 }
 
 .showPassword {
     margin-left: 5px;
 }
 
-/* animação */
+.account span a {
+    text-decoration: none;
+}
 
-@keyframes tatu {
+.account span a:hover {
+    color: rgba(0, 0, 255, 0.644);
+}
+
+
+/* toggle button */
+
+.toggle {
+    width: 75px;
+    height: 30px;
+    appearance: none;
+    background-color: #DAE2DF;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 16px 1px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    transition: .4s;
+    position: relative;
+}
+
+.toggle:checked {
+    background: #3DECB1;
+}
+
+.toggle:before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: #EDF3F1;
+    border-radius: 50%;
+    position: absolute;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.25);
+    top: 0;
+    left: 0;
+    transition: .4s;
+}
+
+.toggle:checked:before {
+    left: 45px;
+}
+
+/* background animation */
+
+@keyframes fundo {
     0% {
         background-position: 0 0;
     }

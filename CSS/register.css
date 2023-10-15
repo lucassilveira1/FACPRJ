@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 * {
     margin: 0;
@@ -6,11 +7,13 @@
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(-45deg, #ffce51, #ff7253, #fd5754);
+    animation: fundo 30s infinite ease-in-out;
     min-height: 100vh;
-    background: #aaa;
     background-size: 300%;
     background-position: 0 0;
 }
@@ -35,7 +38,7 @@ form {
     padding: 20px 40px;
     border-radius: 5px;
     box-shadow: 0 0 45px #00000077;
-
+    max-height: 80vh;
     overflow-y: scroll;
     max-height: 80vh;
 }
@@ -122,9 +125,38 @@ button:hover {
     margin-top: 10px;
     display: flex;
     justify-content: center;
+    gap: 5px;
+}
+
+.account span a {
+    text-decoration: none;
+}
+
+.account span a:hover {
+    color: rgba(0, 0, 255, 0.644);
 }
 
 .showPassword {
     margin-left: 5px;
 }
 
+
+/* background animation */
+
+@keyframes fundo {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 100% 100%;
+    }
+    50% {
+        background-position: 0 100%;
+    }
+    75% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}

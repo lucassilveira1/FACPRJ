@@ -7,7 +7,7 @@ body {
     background-color: #F6FCFF;
 }
 
-.container {
+.index-container {
     min-height: 60vh;
     margin-bottom: 5em;
 }
@@ -89,11 +89,12 @@ body {
     
     opacity: 1;
     transform: scaleY(1);
-
+    
 }
 
 .dropdown li:hover {
-    background-color: #aaa;
+    background-color: #cacecc;
+    font-style: italic;
 }
 
 
