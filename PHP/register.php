@@ -162,7 +162,7 @@
             <button type="submit">Cadastrar</button>
             <button type="reset">Limpar</button>
         </div>
-        <p class="account">Já possui conta? <a href="login.php"> Entre!</a></p>
+        <p class="account">Já possui conta? <span><a href="login.php"> Entre!</a></span></p>
         </form>
     </div>
     

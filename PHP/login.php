@@ -85,6 +85,8 @@
         </div>
     </form>   
     
+    <p class="account">Não possui conta? <span><a href="register.php">Cadastre-se!</a></span></p>
+
     <script src="../scripts/users.js"></script>
 </body>
 </html>
