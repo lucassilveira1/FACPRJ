@@ -19,7 +19,7 @@
     <title>Index</title>
 </head>
 <body>
-    <div class="container">
+    <div class="index-container">
 
     <nav class="navbar">
 
