@@ -123,6 +123,16 @@
         </div>
 
         <div class="input-box">
+            <label for="address">CEP</label>
+            <div class="input">
+                <input type="text" placeholder="Digite seu CEP" id="address" name="address" required>
+                <i>
+                    <img src="../assets/location-dot-solid.svg" alt="ícone de localização" width="14px">
+                </i>
+            </div>
+        </div>
+
+        <div class="input-box">
             <label for="login">Login</label>
             <div class="input">
                 <input type="text" placeholder="Crie um login" id="login" name="login" required>
