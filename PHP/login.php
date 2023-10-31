@@ -32,8 +32,11 @@
             header("Location: index.php"); // Página de boas-vindas após o login
         } else {
             // Login falhou
-            die("Não foi encontrado dados em nossa base para o Login e Senha digitados.");
-            
+            echo "Não foram encontrados dados em nossa base para o Login e Senha digitados.";
+            echo '<a href="index.php">
+            <p>
+            Voltar.</a>';
+            exit; // Encerra a execução do script
         }
 
         $mysqli->close();
