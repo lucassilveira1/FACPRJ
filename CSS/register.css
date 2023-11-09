@@ -141,6 +141,19 @@ button:hover {
 }
 
 
+dialog::backdrop {
+    background-color: rgb(0 0 0 / .5);
+}
+
+dialog {
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
 /* background animation */
 
 @keyframes fundo {

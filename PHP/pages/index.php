@@ -2,7 +2,7 @@
 
     session_start();
     if(!isset($_SESSION['login'])) {
-        header("Location: login.php");
+        header("Location: ../login.php");
         exit;
     }
 
@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../../css/index.css">
     <title>Index</title>
 </head>
 <body>
@@ -46,14 +46,14 @@
         </li>
         
         <li>
-            <a href="https://telecall.com/contato/">Contato</a>
+            <a href="contact.php">Contato</a>
         </li>
         
         <li class="dropdown-menu">
             <a href="#">Olá, <?php echo $login ?> &#x25BE;</a>
             <ul class="dropdown">
                 <li>
-                    <a href="logout.php">Desconectar</a>
+                    <a href="../logout.php">Desconectar</a>
                 </li>
                 <li>
                     <a href="changePswd.php">Alterar senha</a>

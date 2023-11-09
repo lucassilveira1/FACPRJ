@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,49 +9,9 @@
 <body>
     <div class="container">
 
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // conectando ao banco
-            $mysqli = new mysqli("localhost", "root", "", "projeto");
-            // verificando conexão
-            if($mysqli->connect_error) {
-                die("Erro na conexão com o banco de dados: " . $mysqli->connect_error);
-            };
-
-            // Dados do Formulário
-            $name = $_POST["name"];
-            $data = $_POST["date"];
-            $sexo = $_POST["sexo"];
-            $motherName = $_POST["motherName"];
-            $cpf = $_POST["cpf"];
-            $cellphone = $_POST["celular"];
-            $telFixo = $_POST["fixo"];
-            $email = $_POST["email"];
-            $endereco = $_POST["address"];
-            $login = $_POST["login"];
-            $senha = $_POST["password"];
-
-            // criando a instrução para inserir os dados na tabela
-            $sql = "INSERT INTO register (Nome, `Data de Nascimento`, Sexo, `Nome Materno`, CPF, `Tel Celular`, `Tel Fixo`, `E-mail`, Endereço, `Login`, `Senha`)
-                VALUES ('$name','$data', '$sexo', '$motherName', '$cpf', '$cellphone', '$telFixo', '$email', '$endereco', '$login', '$senha')";
-
-            // executando a instrução
-            if($mysqli->query($sql) === TRUE) {
-                header("Location: login.php");
-            } else {
-                header("Location: register.php");
-            }
-            
-            // finalizando a conexão
-            $mysqli->close();
-        }
-
-        
-        ?>
-
         <h1>Cadastre-se!!</h1>
 
-        <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST">
+        <form action="exe/register_exe.php" method="POST">
         <div class="input-box">
             <label for="name">Nome</label>
             <input type="text" placeholder="Nome e Sobrenome" id="name" name="name" required>
@@ -123,9 +83,9 @@
         </div>
 
         <div class="input-box">
-            <label for="address">CEP</label>
+            <label for="cep_input">CEP</label>
             <div class="input">
-                <input type="text" placeholder="Digite seu CEP" id="address" name="address" required>
+                <input type="text" placeholder="Digite seu CEP" id="cep_input" name="cep_input" required>
                 <i>
                     <img src="../assets/location-dot-solid.svg" alt="ícone de localização" width="14px">
                 </i>
@@ -141,6 +101,12 @@
                 </i>           
              </div>
         </div>
+
+        <dialog>
+            <p>O login precisa ter no mínimo 6 caracteres.</p>
+            
+            <button>Ok</button>
+        </dialog>
 
         <div class="input-box">
             <label for="password">Senha</label>
@@ -169,13 +135,13 @@
             </div>           
         </div>
         <div class="btn">
-            <button type="submit">Cadastrar</button>
+            <button type="submit" id="submit">Cadastrar</button>
             <button type="reset">Limpar</button>
         </div>
         <p class="account">Já possui conta? <span><a href="login.php"> Entre!</a></span></p>
         </form>
     </div>
     
-        <script src="../scripts/validation.js"></script>
+    <script src="../scripts/validation.js" defer></script>
 </body>
 </html>
