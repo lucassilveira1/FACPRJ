@@ -17,10 +17,10 @@
 
         if($newPassword === $confirmPassword) {
         // conectando ao banco
-        $mysqli = new mysqli("localhost", "root", "", "projeto");
+        include('connection.php');
         // verificando conexão
-        if($mysqli->connect_error) {
-            die("Erro na conexão com o banco de dados: " . $mysqli->connect_error);
+        if($conn->connect_error) {
+            die("Erro na conexão com o banco de dados: " . $conn->connect_error);
         };
 
 

@@ -8,47 +8,9 @@
 </head>
 <body>
 <div class="container">
-
-
-    <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $login = $_POST["login"];
-        $password = $_POST["password"];
-
-        // Conectar ao banco de dados
-        $mysqli = new mysqli("localhost", "root", "", "projeto");
-        if ($mysqli->connect_error) {
-            die("Erro na conexão com o banco de dados: " . $mysqli->connect_error);
-        }
-
-        // Consultar o banco de dados para verificar as credenciais
-        $sql = "SELECT * FROM register WHERE `Login` = '$login' AND `Senha` = '$password'";
-        $result = $mysqli->query($sql);
-
-        if ($result->num_rows == 1) {
-            // Login bem-sucedido
-            session_start();
-            $_SESSION['login'] = $login;
-            header("Location: index.php"); // Página de boas-vindas após o login
-        } else {
-            // Login falhou
-            echo "Não foram encontrados dados em nossa base para o Login e Senha digitados.";
-            echo '<a href="index.php">
-            <p>
-            Voltar.</a>';
-            exit; // Encerra a execução do script
-        }
-
-        $mysqli->close();
-    }
-
-
-    ?>
-
-
     <h1>Entrar</h1>
 
-    <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST">
+    <form action="exe/login_exe.php" method="POST">
 
         <div class="input-box">
             <label for="login">Login</label>
