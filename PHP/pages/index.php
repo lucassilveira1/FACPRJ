@@ -64,6 +64,9 @@
                 <li>
                     <a href="#">Área do Cliente</a>
                 </li>
+                <li>
+                    <a href="./listaUsuarios.php">Lista de Usuários</a>
+                </li>
             </ul>
         </li>
     </ul>
