@@ -1,12 +1,14 @@
 <?php
 session_start();
 
+var_dump($_SESSION['usuario']);
+
 if($_SESSION['usuario']['adm'] == "0" || !isset($_SESSION['usuario'])) {
     header("Location: ./index.php");
 };
 
 include("../connection.php");
-$sql = "SELECT * FROM register";
+$sql = "SELECT * FROM registerr";
 $result = $conn->query($sql);
 
 ?>

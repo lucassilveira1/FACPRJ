@@ -5,7 +5,6 @@ body {
   padding: 0;
   margin: 0;
   background-color: #f6fcff;
-  display: flex;
 }
 
 .container {
@@ -114,7 +113,7 @@ body {
 /* FORM */
 
 .formulario-contato {
-  width: 20%; /* Ajuste a largura conforme necessário */
+  width: 30%;
   margin: auto;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -138,6 +137,7 @@ label span {
 }
 
 input,
+.botao,
 textarea {
   background-color: #fcfafa;
   color: #000000;
@@ -149,7 +149,7 @@ textarea {
   margin-bottom: 0.6em;
 }
 
-.btn {
+.btn:hover {
   background-color: rgb(31, 150, 104);
 }
 
@@ -160,7 +160,19 @@ textarea::placeholder {
 
 .formulario-contato label,
 .formulario-contato input,
-.formulario-contato textarea {
+.formulario-contato textarea,
+.formulario-contato button {
   margin-bottom: 10px;
   width: 100%;
+}
+
+.botao {
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: rgb(31, 150, 104);
+  transition: 0.7s;
+
+  color: white;
 }

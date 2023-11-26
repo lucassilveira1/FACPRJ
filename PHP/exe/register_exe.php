@@ -22,7 +22,7 @@
             $senha = $_POST["password"];
 
             // criando a instrução para inserir os dados na tabela
-            $sql = "INSERT INTO registerr (Nome, DataNasc, Sexo, NomeMaterno, CPF, Celular, Fixo, Email, Endereco, CEP, `Login`, Senha)
+            $sql = "INSERT INTO register (Nome, DataNasc, Sexo, NomeMaterno, CPF, Celular, Fixo, Email, Endereco, CEP, `Login`, Senha)
                 VALUES ('$name','$data', '$sexo', '$motherName', '$cpf', '$cellphone', '$telFixo', '$email', '$endereco', '$cep', '$login', '$senha')";
 
             // executando a instrução

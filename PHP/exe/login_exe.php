@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Consultar o banco de dados para verificar as credenciais e se o usuário é um administrador
-    $sql = "SELECT * FROM registerr WHERE Login = '$login' AND Senha = '$password'";
+    $sql = "SELECT * FROM register WHERE Login = '$login' AND Senha = '$password'";
     $result = $conn->query($sql);
 
     

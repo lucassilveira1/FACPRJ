@@ -77,7 +77,7 @@ session_start();
 
         <textarea id="mensagem" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
 
-        <input type="submit" value="Enviar">
+        <button class="botao" type="submit">Enviar</button>
     </form>
 
         
