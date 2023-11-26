@@ -1,6 +1,6 @@
 <?php
     include("../connection.php");
 
-    $sql = "select * from register";
+    $sql = "select * from registerr";
     $result = $conn->query($sql);
 ?>

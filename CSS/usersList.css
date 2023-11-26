@@ -5,8 +5,79 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: "Arial", sans-serif;
+  display: flex;
 }
 
 h1 {
-  color: green;
+  text-align: center;
+  align-items: center;
+  color: black;
+}
+
+.user-list {
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.edit-link,
+.delete-link {
+  text-decoration: none;
+  color: blue;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.edit-link:hover {
+  background-color: #99ff99;
+}
+
+.delete-link:hover {
+  background-color: #ff9999; /* Cor de fundo vermelho ao passar o mouse */
+}
+
+.edit-link a,
+.delete-link a {
+  text-decoration: none;
+}
+
+.btn {
+  margin-top: 10px;
+  font-size: 16px;
+  padding: 10px 30px;
+  border: none;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn:hover {
+  background-color: rgb(31, 150, 104);
+  transition: 0.8s;
 }

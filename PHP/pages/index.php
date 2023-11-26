@@ -1,12 +1,12 @@
 <?php
+session_start();
 
-    session_start();
-    if(!isset($_SESSION['login'])) {
-        header("Location: ../login.php");
-        exit;
-    }
+$login = "Entrar";
 
-    $login = $_SESSION['login'];
+if(isset($_SESSION["usuario"])) {
+    $login = $_SESSION["usuario"]["Login"];
+};
+
 ?>
 
 <!DOCTYPE html>
@@ -33,30 +33,28 @@
                 Home
             </a>
         </li>
-
-        <li>
-            <a href="register.php">
-                Cadastro
-            </a>
-        </li>
-
         
         <li>
             <a href="../html/about.html">Sobre nós</a>
         </li>
         
         <li>
-            <a href="contact.php">Contato</a>
+            <a href="./contact.php">Contato</a>
         </li>
         
+        <?php
+            if(isset($_SESSION["usuario"])):
+
+        ?>
+
         <li class="dropdown-menu">
-            <a href="#">Olá, <?php echo $login ?> &#x25BE;</a>
+            <a href="#"><?php echo $_SESSION["usuario"]["Login"]; ?> &#x25BE;</a>
             <ul class="dropdown">
                 <li>
                     <a href="../logout.php">Desconectar</a>
                 </li>
                 <li>
-                    <a href="changePswd.php">Alterar senha</a>
+                    <a href="../changePswd.php">Alterar senha</a>
                 </li>
                 <li>
                     <a href="#">Modelo do BD</a>
@@ -69,6 +67,16 @@
                 </li>
             </ul>
         </li>
+        <?php
+            else:
+                
+        ?>
+            <li>
+                <a href="../login.php">Entrar/Cadastro</a>
+            </li>
+        <?php
+            endif;
+        ?>
     </ul>
     </nav>
 
