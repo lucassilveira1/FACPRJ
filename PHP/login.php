@@ -37,13 +37,7 @@
         <i id="showPassIcon"><img src="../assets/eye-regular.svg" width="15px"></i>
     </div>
     
-    
-    <div class="togglebtn">
-        <p id="toggleContent">
-            Usuário Master?
-        </p>
-        <input type="checkbox" class="toggle" id="toggleBtn">
-    </div>
+
 
     <div class="btn">
             <button type="submit">Entrar</button>

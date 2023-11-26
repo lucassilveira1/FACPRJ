@@ -7,40 +7,8 @@
     <title>Mudança de Senha</title>
 </head>
 <body>
-    <?php
-    
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Dados do Formulário
-            $legacyPassword = $_POST['legacyPassword'];
-            $newPassword = $_POST['newPassword'];
-            $confirmPassword = $_POST['confirmPassword'];
 
-        if($newPassword === $confirmPassword) {
-        // conectando ao banco
-        include('connection.php');
-        // verificando conexão
-        if($conn->connect_error) {
-            die("Erro na conexão com o banco de dados: " . $conn->connect_error);
-        };
-
-
-        // criando a instrução para alterar uma coluna da tabela
-        $sql = "UPDATE register SET Senha = '$newPassword' WHERE Senha = '$legacyPassword'";
-
-        // executando a instrução
-        if($mysqli->query($sql) === TRUE) {
-            die("Senha alterada com sucesso!");
-        } else {
-            die("Ocorreu um erro ao alterar a senha.");
-        }
-        
-        // finalizando a conexão
-        $mysqli->close();
-    }
-}
-
-    ?>
-<form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST">
+<form action="exe/password_exe.php" method="POST">
 
     <div class="container">
         <h1>Mude sua senha!</h1>
