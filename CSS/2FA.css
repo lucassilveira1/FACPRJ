@@ -1,0 +1,97 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#main {
+  text-align: center;
+}
+
+.video-box img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.icon-box img {
+  max-width: 100%;
+  height: auto;
+  margin: -20px 0;
+}
+
+.services h2 {
+  margin-top: 40px;
+}
+
+.services .icon-box {
+  margin-bottom: 40px;
+}
+
+.services .icon-box img {
+  max-width: 100%;
+  height: auto;
+  margin: -20px 0;
+}
+
+.why-us .video-box img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.why-us .icon-box img {
+  max-width: 100%;
+  height: auto;
+  margin: -20px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.services h2 {
+  margin-top: 40px;
+}
+
+.services .icon-box {
+  margin-bottom: 40px;
+}
+
+.services .icon-box img {
+  max-width: 100%;
+  height: auto;
+  margin: -20px 0;
+}
+
+.services .description {
+  margin-top: 10px;
+}
+
+.why-us h4,
+.services h4 {
+  margin-bottom: 10px;
+}
+
+.why-us p,
+.services p {
+  margin-bottom: 20px;
+}
+
+.services .description {
+  margin-top: 10px;
+}
+
+.why-us .icon-box img {
+  max-width: 100%;
+  height: auto;
+  margin: -20px 0;
+}
+
+.why-us h4 {
+  margin-bottom: 10px;
+}
+
+.why-us p {
+  margin-bottom: 20px;
+}

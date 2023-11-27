@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-var_dump($_SESSION['usuario']);
-
 if($_SESSION['usuario']['adm'] == "0" || !isset($_SESSION['usuario'])) {
     header("Location: ./index.php");
 };
@@ -20,7 +18,7 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/usersList.css">
-    <title>Document</title>
+    <title>Lista de Usuários</title>
 </head>
 <body>
 
