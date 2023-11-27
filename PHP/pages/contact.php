@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+$login = "Entrar";
+
+if(isset($_SESSION['usuario'])) {
+    $login = $_SESSION['usuario']["Login"];
+};
+
 ?>
 
 <!DOCTYPE html>
@@ -9,8 +15,9 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/contact.css">
+    <link rel="stylesheet" href="../../css/footer.css">
 
-    <title>Document</title>
+    <title>Contato</title>
 </head>
 <body>
     <div class="container">
@@ -29,28 +36,26 @@ session_start();
             </li>
 
             <li>
-                <a href="register.php">
-                    Cadastro
-                </a>
-            </li>
-
-            
-            <li>
-                <a href="../html/about.html">Sobre nós</a>
+                <a href="./about.php">Sobre nós</a>
             </li>
             
             <li>
                 <a href="contact.php">Contato</a>
             </li>
             
+            <?php
+                if(isset($_SESSION["usuario"])):
+
+            ?>
+
             <li class="dropdown-menu">
-                <a href="#">Olá, <?php echo $_SESSION['usuario']['Login']; ?> &#x25BE;</a>
+            <a href="#"><?php echo $_SESSION["usuario"]["Login"]; ?> &#x25BE;</a>
                 <ul class="dropdown">
                     <li>
                         <a href="../logout.php">Desconectar</a>
                     </li>
                     <li>
-                        <a href="changePswd.php">Alterar senha</a>
+                        <a href="../changePswd.php">Alterar senha</a>
                     </li>
                     <li>
                         <a href="#">Modelo do BD</a>
@@ -63,30 +68,68 @@ session_start();
                     </li>
                 </ul>
             </li>
+            <?php
+            else:
+                
+             ?>
+            <li>
+                <a href="../login.php">Entrar/Cadastro</a>
+            </li>
+            <?php
+                endif;
+            ?>
         </ul>
         </nav>
     </div>
 
-    <div class="formulario-contato">
-        <form method="post">
-        <input type="text" id="nome" name="nome" placeholder="Nome" required>
+    <div class="formulario-container">
+        <div class="formulario-contato custom-form">
+            <form method="post">
+            <input type="text" id="nome" name="nome" placeholder="Nome" required>
 
-        <input type="email" id="email" name="email" placeholder="E-mail" required>
+            <input type="email" id="email" name="email" placeholder="E-mail" required>
 
-        <input type="text" id="assunto" name="assunto" placeholder="Assunto" required>
+            <input type="text" id="assunto" name="assunto" placeholder="Assunto" required>
 
-        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
 
-        <button class="botao" type="submit">Enviar</button>
-    </form>
-
-        
+            <button class="botao" type="submit">Enviar</button>
+            </form>
+        </div>
     </div>
-
     
 
-    <footer class="footer">
-        <h3>TELECALL</h3>
-    </footer>
+<footer class="footer">
+    <h3>TELECALL</h3>
+    <h4>COPYRIGHT &copy; Todos os direitos reservados.
+
+    <div class="footer_services">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="2FA.php">Autenticação de dois fatores</a>
+                    </li>
+                    <li><a href="SMS-Programavel.php">SMS Programável</a>
+                    </li>
+                    <li><a href="Numero-Mascara.php">Número Máscara</a></li>
+                    <li><a href="google-verified.php">Google Verified Calls</a></li>
+
+                </ul>
+            </div>
+
+            <div class="contact-area">
+                <h4>Fale Conosco</h4>
+                <p>
+                    Centro empresarial Mario Henrique Simonsen <br> Av. das Américas, 3434 | Bloco 1, Sala 505
+                    Barra da Tijuca
+                    | Rio de Janeiro, RJ <br><br>
+                    <strong>Telefone:</strong> (21) 3030-101055<br>
+                    <strong>Email:</strong>suporte@telecall.com<br>
+
+                    Ou <a href="./contact.php">clique</a> e nos envie uma mensagem!
+            </p>
+
+    </div>
+ </h4>
+</footer>
 </body>
 </html>

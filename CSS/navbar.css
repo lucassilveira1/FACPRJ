@@ -7,7 +7,7 @@ body {
   background-color: #f6fcff;
 }
 
-.container {
+.index-container {
   margin-bottom: 5em;
 }
 
@@ -46,11 +46,6 @@ body {
 
 .links_list li a:hover {
   color: #bbb;
-}
-
-.active {
-  background-color: #000;
-  color: #fff;
 }
 
 /* dropdown */
@@ -93,70 +88,14 @@ body {
   font-style: italic;
 }
 
-/* FORM */
+/* footer */
 
-.formulario-contato {
-  width: 30%;
-  margin: auto;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+.footer {
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-}
-
-label {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-label span {
-  font-weight: bold;
-  margin-bottom: 0.5em;
-  color: #aaa;
-  font-size: 0.7em;
-}
-
-input,
-.botao,
-textarea {
-  background-color: #fcfafa;
-  color: #000000;
-  border: none;
-  border-bottom: 1px solid #555;
-  border-radius: 2px;
-  padding: 10px 8px;
-  outline: none;
-  margin-bottom: 0.6em;
-}
-
-.btn:hover {
-  background-color: rgb(31, 150, 104);
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #000000;
-}
-
-.formulario-contato label,
-.formulario-contato input,
-.formulario-contato textarea,
-.formulario-contato button {
-  margin-bottom: 10px;
-  width: 100%;
-}
-
-.botao {
-  cursor: pointer;
-}
-
-.botao:hover {
-  background-color: rgb(31, 150, 104);
-  transition: 0.7s;
-
-  color: white;
+  background-color: #edf3f6;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px -2px 10px 0px;
 }
