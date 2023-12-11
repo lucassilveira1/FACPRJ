@@ -13,9 +13,9 @@ body {
 
 .navbar {
   display: flex;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px -2px 10px 0px;
   justify-content: space-between;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px -2px 10px 0px;
   padding: 0.5em 2em;
 }
 
@@ -46,11 +46,6 @@ body {
 
 .links_list li a:hover {
   color: #bbb;
-}
-
-.active {
-  background-color: #000;
-  color: #fff;
 }
 
 /* dropdown */
@@ -103,4 +98,77 @@ body {
   justify-content: center;
   background-color: #edf3f6;
   box-shadow: rgba(0, 0, 0, 0.2) 0px -2px 10px 0px;
+}
+
+/* NOSSOS CLIENTES */
+
+.cliente-title {
+  text-align: center;
+  margin: 3% 0 0 0;
+}
+
+.cliente-subtitle {
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.card-container {
+  display: flex;
+}
+
+.card-cliente {
+  flex: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  overflow: hidden;
+
+  width: 300px;
+  height: auto;
+  border-radius: 20px solid;
+  margin-bottom: 30px;
+  transition-duration: 0.5s;
+
+  box-shadow: 0 0 10px #00000039;
+}
+
+.card-cliente:hover {
+  transform: scale(1.03);
+}
+
+.cliente-txt {
+  text-align: center;
+  color: #7a7a7a;
+  font-size: 1.3em;
+  font-style: italic;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.cliente-name {
+  text-align: center;
+  color: #7a7a7a;
+  font-style: initial;
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.cliente-exe {
+  text-align: center;
+  color: #183269;
+}
+
+.cliente-img {
+  margin: auto;
+  width: 200px;
+  height: 100%;
+  box-sizing: content-box;
+}
+
+#imagem {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
 }

@@ -6,7 +6,7 @@ if($_SESSION['usuario']['adm'] == "0" || !isset($_SESSION['usuario'])) {
 };
 
 include("../connection.php");
-$sql = "SELECT * FROM registerr";
+$sql = "SELECT * FROM register";
 $result = $conn->query($sql);
 
 ?>
